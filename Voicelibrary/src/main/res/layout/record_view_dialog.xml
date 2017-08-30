@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:voiceView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_circular_bg">
+
+        <com.jason.voicelibrary.view.VoiceLineView
+            android:id="@+id/voicLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            voiceView:fineness="three"
+            voiceView:lineSpeed="90"
+            voiceView:maxVolume="200"
+            voiceView:middleLine="@android:color/transparent"
+            voiceView:middleLineHeight="1dp"
+            voiceView:rectSpace="2dp"
+            voiceView:rectWidth="5dp"
+            voiceView:sensibility="four"
+            voiceView:viewMode="line"
+            voiceView:voiceLine="@color/colorPrimary" />
+
+
+        <ImageView
+            android:id="@+id/ok"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/hollow_circle_click" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/delete"
+                android:layout_toStartOf="@+id/delete" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
